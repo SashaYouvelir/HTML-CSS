@@ -25,3 +25,13 @@ function toggleMobileNav() {
     navBtn.classList.toggle('nav-button-close');
     body.classList.toggle('no-scroll');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navButton = document.querySelector('.nav-button');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    navButton.addEventListener('click', function() {
+        this.classList.toggle('open');
+        mobileNav.classList.toggle('open');
+    });
+});
